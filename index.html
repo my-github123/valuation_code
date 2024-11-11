@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <center><h3>Auto Valuation</h3></center>
+    <div class="formdiv">
+    <form method="post" action="/evaluate">
+        <label>Price:</label><input type="number" name="price" required><br>
+        <label>Age:</label><input type="number" name="age" required><br>
+        <label>Months:</label><input type="number" name="months" required><br>
+        <label>Number of Owner:</label><input type="number" name="owners" required><br>
+        <label>Odometer Reading:</label><input type="text" name="odo_reading" required><br>
+        <label>City:</label><select name="city">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+        <label>Fuel:</label><select name="fuel">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+        </select><br>
+        <label>Transmission:</label><select name="transmission">
+            <option value="Automatic">Automatic</option>
+            <option value="Manual">Manual</option>
+        </select><br>
+        <label>Category:</label><select name="category">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        <input type="submit" id="btn">
+    </form></div>
+</body>
+</html>
